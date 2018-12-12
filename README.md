@@ -6,8 +6,10 @@ Instruction to Engage with OnePlus Launcher Shelf
 ###### IMPORTANT: This document is written with former MarkDown syntax, reading with a MarkDown viewer is best recommended
 
 # External Widget Provider - manage your App Widget on *Shelf*
+
 OnePlus Launcher built a *ContentProvider* for authorized external applicaitions to add/remove their *App Widgets* onto/from Shelf.  
 We called it `External Widget Provider`
+
 Guidance
 --------
 #### content provider URI
