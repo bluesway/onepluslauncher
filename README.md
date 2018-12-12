@@ -6,7 +6,6 @@ Instruction to Engage with OnePlus Launcher Shelf
 ###### IMPORTANT: This document is written with former MarkDown syntax, reading with a MarkDown viewer is best recommended
 
 # External Widget Provider - manage your App Widget on *Shelf*
-
 OnePlus Launcher built a *ContentProvider* for authorized external applicaitions to add/remove their *App Widgets* onto/from Shelf.  
 We called it `External Widget Provider`
 
@@ -68,7 +67,7 @@ Guidance
   // remove the existing app widget from Shelf (reuse the previous configured bundle object)
   bundle.putInt("widget_id", widgetId); // the widget id of the corresponding widget to be removed
   bundle.putBoolean("external_only", true); // only remove the widget which is not added from shelf
-  Bundle removeResult = resolver.call(SHELF_URI, "manageWidget", "remove", bundle);
+  Bundle removeResult = resolver.call(EXTERNAL_WIDGET_URI, "manageWidget", "remove", bundle);
   if (removeResult == null) {
       Log.e("Test", "the method is not available");
   }
@@ -133,7 +132,7 @@ add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's *AndroidMani
 | seat_available | *true* if there is still available seats for new app widget in *Shelf*     |
 
 ## Limitation
-* to prevent malicious applicaiton messed up user's *Shelf*, before engeging with the External Widget Provider, application owner requires to notify Launcher team to unlock the restriction for your application's package name
+* to prevent malicious applicaiton messed up user's *Shelf*, before engeging with the **External Widget Provider**, application owner requires to notify Launcher team to unlock the restriction for your application's package name
 
 # Implement *General Card* with Shelf SDK
 Normal Card
