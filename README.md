@@ -94,7 +94,7 @@ add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's _AndroidMani
   </manifest>
 ```
 
-#### Arguments description
+### Arguments description
 
 **add - to add an app widget on the Shelf**
 
