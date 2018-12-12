@@ -1,3 +1,7 @@
+---
+description: This page will get you know how to put your app widget onto Shelf
+---
+
 # Instruction to Engage with OnePlus Launcher Shelf
 
 ## External Widget Provider - manage your App Widget on _Shelf_
@@ -5,17 +9,15 @@
 OnePlus Launcher built a _ContentProvider_ for authorized external applicaitions to add/remove their _App Widgets_ onto/from Shelf.  
 We called it `External Widget Provider`
 
-### Guidance
-
-**content provider URI**
+#### **content provider URI**
 
 > content://net.oneplus.launcher.shelf/widgets
 
-**required permission**
+#### **required permission**
 
 > net.oneplus.launcher.permission.EXTERNAL\_WIDGET
 
-**method**
+#### **method**
 
 > manageWidget
 
@@ -78,7 +80,7 @@ We called it `External Widget Provider`
   }
 ```
 
-#### Grant permission to access Shelf
+### Grant permission to access Shelf
 
 add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's _AndroidManifest.xml_
 
@@ -92,7 +94,7 @@ add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's _AndroidMani
   </manifest>
 ```
 
-#### API instruction
+#### Arguments description
 
 **add - to add an app widget on the Shelf**
 
@@ -145,29 +147,5 @@ add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's _AndroidMani
 
 ### Limitation
 
-* to prevent malicious applicaiton messed up user's _Shelf_, before engeging with the **External Widget Provider**, application owner requires to notify Launcher team to unlock the restriction for your application's package name
-
-## Implement _General Card_ with Shelf SDK
-
-### Normal Card
-
-#### Description
-
-#### Getting started
-
-**Write a CardProvider**
-
-**Update the card with specific style on callback received**
-
-### VIP Card
-
-#### Description
-
-#### Getting started
-
-**Write a CardProvider**
-
-**Create the card with specific style**
-
-**Post the card onto Shelf**
+to prevent malicious applicaiton messed up user's _Shelf_, before engeging with the **External Widget Provider**, application owner requires to notify Launcher team to unlock the restriction for your application's package name
 
