@@ -2,8 +2,6 @@
 
 ![OnePlus Launcher](https://lh3.googleusercontent.com/b-40YX8xbQsPxOVsPWchsaNRv5cJBqvF0jVGNHBsllUTURVQ8EGmCVsMy1RadIpXuekg=s240)
 
-## Instruction to Engage with OnePlus Launcher Shelf
-
 ![MarkDown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/64px-Markdown-mark.svg.png)
 
 **IMPORTANT: This document is written with former MarkDown syntax, reading with a MarkDown viewer is best recommended**
