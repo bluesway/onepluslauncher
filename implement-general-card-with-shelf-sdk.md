@@ -14,9 +14,9 @@ You can check the **Shelf SDK** documentation in Javadoc format [here](http://bl
 
 The content provider for a **General Card** is actually a formal _BroadcastReceiver_, there are several configuration you have to completed before implementing the **Shelf SDK**
 
-### **Use permission to access General Card manager**
+### **Request permission to access General Card manager**
 
-use the permission `net.oneplus.shelf.permission.CARD` in your app's _AndroidManifest.xml_
+add `net.oneplus.shelf.permission.CARD` permission in your app's _AndroidManifest.xml_
 
 ```markup
   <?xml version="1.0" encoding="utf-8"?>
