@@ -6,8 +6,7 @@ description: This page will get you know how to put your app widget onto Shelf
 
 ## External Widget Provider - manage your App Widget on _Shelf_
 
-OnePlus Launcher built a _ContentProvider_ for authorized external applicaitions to add/remove their _App Widgets_ onto/from Shelf.  
-We called it `External Widget Provider`
+The `External Widget Provider` is a _ContentProvider_ built by OnePlus Launcher team for authorized external applications to manage their _App widgets_ in Shelf, the application owner requires to apply for an _API key_ with corresponding _ComponentName_ of the App widget.  
 
 #### **content provider URI**
 
@@ -80,11 +79,11 @@ We called it `External Widget Provider`
   }
 ```
 
-### Grant permission to access Shelf
+### Request permission to access External Widget Provider
 
-add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's _AndroidManifest.xml_
+add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` permission in your app's _AndroidManifest.xml_
 
-```markup
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.myapplication" >
       <uses-permission android:name="net.oneplus.launcher.permission.EXTERNAL_WIDGET" />
@@ -102,8 +101,9 @@ add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's _AndroidMani
 
 | **Key** | **Value** |
 | :--- | :--- |
-| package | the **package name** for the widget component to be bound |
-| class | the **class name** for the widget component to be bound |
+| package | the **package name** of the widget component to be bound |
+| class | the **class name** of the widget component to be bound |
+| api_key | the corresponding **API key** for managing the widget component |
 
 **Output extras**
 
@@ -118,8 +118,9 @@ add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's _AndroidMani
 
 | **Key** | **Value** |
 | :--- | :--- |
-| package | the **package name** for the widget component to be removed |
-| class | the **class name** for the widget component to be removed |
+| package | the **package name** of the widget component to be removed |
+| class | the **class name** of the widget component to be removed |
+| api_key | the corresponding **API key** for managing the widget component |
 | widget\_id | the id of the widget component to be removed |
 | external\_only | only remove the widget component which was added externally |
 
@@ -136,16 +137,13 @@ add `net.oneplus.launcher.permission.EXTERNAL_WIDGET` in your app's _AndroidMani
 
 | **Key** | **Value** |
 | :--- | :--- |
-| package | the **package name** for the widget component used to query _Shelf_ status |
-| class | the **class name** for the widget component used to query _Shelf_ status |
+| package | the **package name** of the widget component used to query _Shelf_ status |
+| class | the **class name** of the widget component used to query _Shelf_ status |
+| api_key | the corresponding **API key** for managing the widget component |
 
 **Output extras**
 
 | **Key** | **Value** |
 | :--- | :--- |
-| seat\_available | _true_ if there is still available seats for new app widget in _Shelf_ |
-
-### Limitation
-
-to prevent malicious applicaiton messed up user's _Shelf_, before engeging with the **External Widget Provider**, application owner requires to notify Launcher team to unlock the restriction for your application's package name
+| seat\_available | _true_ if there is enough seats for new App widget in _Shelf_ |
 
