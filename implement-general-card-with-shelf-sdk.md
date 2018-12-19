@@ -321,3 +321,18 @@ There is one thing different for posting **Normal Card** and **VIP Card**, whils
 
 Check the API documentation for `net.oneplus.shelf.card.CardManager`
 
+### Appendix
+#### Proguard rules
+
+You may like to add following rules in your proguard configuration
+
+```java
+# for 3rd-party app who use the Shelf SDK is required to load the proguard rules
+-keep public class net.oneplus.shelf.card.Card { public protected *; }
+-keep public class net.oneplus.shelf.card.Card$** { public protected *; }
+-keep public class * extends net.oneplus.shelf.card.Card$Style { public protected *; }
+-keep public enum net.oneplus.shelf.card.ImageContentStyle$** { public *; }
+-keep public class net.oneplus.shelf.card.ListViewStyle$** { public *; }
+-keep public class net.oneplus.shelf.card.NotePanelStyle$** { public *; }
+-keep public class net.oneplus.shelf.card.CustomStyle$** { public *; }
+```
