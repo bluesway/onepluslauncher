@@ -257,6 +257,8 @@ public class DemoCardProvider extends CardProvider {
     }
 }
 ```
+**CAUTION**  
+If you override the _onReceive()_ method, you NEED to call the super method, otherwise the provider will never work.
 
 ### **VIP Card**
 
@@ -322,6 +324,10 @@ There is one thing different for posting **Normal Card** and **VIP Card**, whils
 Check the API documentation for `net.oneplus.shelf.card.CardManager`
 
 ### Appendix
+#### Gson is required
+
+Shelf SDK requires Gson for exchange Card data between processes, if your project has not yet used Gson library, please follow the official [instruction](https://github.com/google/gson) to add it into your project.
+
 #### Proguard rules
 
 You may like to add following rules in your proguard configuration
